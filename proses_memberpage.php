@@ -159,7 +159,11 @@ if (isset($_POST['pesan_kado'])){
     $tmp_file = $_FILES['gambar']['tmp_name'];
      
     // Set path folder tempat menyimpan gambarnya
-    $path = "admin-web/gambar_pesanan/kado/".$nama_file;
+    $folder = "admin-web/gambar_pesanan/kado/";
+    $path = $folder.$nama_file;
+    if ( !file_exists($folder) ) {
+        mkdir($folder, 0777, true);
+    }
      
     if($tipe_file == "image/jpeg" || $tipe_file == "image/png"){ // Cek apakah tipe file yang diupload adalah JPG / JPEG / PNG
         // Jika tipe file yang diupload JPG / JPEG / PNG, lakukan :
@@ -169,7 +173,29 @@ if (isset($_POST['pesan_kado'])){
             if(move_uploaded_file($tmp_file, $path)){ // Cek apakah gambar berhasil diupload atau tidak
                 // Jika gambar berhasil diupload, Lakukan :
                 // Proses simpan ke Database
-                $query = "INSERT INTO pemesanan (id_pemesanan,id_pelanggan,id_kado,id_desain,tanggal_pemesanan,gambar_1,gambar_2,id_konfirmasi,deskripsi_pemesanan,status_pemesanan,pesan_admin) values ('','".$id_pelanggan."','{$id_kado}','{$id_desain}','".$tanggal."','".$nama_file."','','','".$deskripsi_pemesanan."','','')";
+                $query = "INSERT INTO pemesanan (
+                id_pemesanan,
+                id_pelanggan,
+                id_kado,
+                id_desain,
+                tanggal_pemesanan,
+                gambar_1,
+                gambar_2,
+                id_konfirmasi,
+                deskripsi_pemesanan,
+                status_pemesanan,
+                pesan_admin) values (
+                '',
+                '".$id_pelanggan."',
+                '{$id_kado}',
+                '{$id_desain}',
+                '".$tanggal."',
+                '".$nama_file."',
+                '',
+                '',
+                '".$deskripsi_pemesanan."',
+                '',
+                '')";
                 $sql = mysql_query($query) ; // Eksekusi/ Jalankan query dari variabel $query
      
                 if($sql){ // Cek jika proses simpan ke database sukses atau tidak

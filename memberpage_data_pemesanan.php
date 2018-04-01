@@ -140,11 +140,27 @@ if (isset($_SESSION['id_user'])) {
 			                        $jenis=$x['nama_hp'];
 			                        $harga=$x['harga'];
 			                        $link="http://localhost/skripsi_abas/index.php?menu=pesan_skin_hp&id=";
+			                    }else if ($r['id_kado'] > 0) {
+			                    	$sql = "SELECT * from kado where kado.id_kado = {$r['id_kado']} ";
+			                    	$sql_desain = "SELECT * from desain where desain.id_desain = {$r['id_desain']} ";
+			                    	$type=mysql_query($sql);
+			                    	$desain=mysql_query($sql_desain);
+
+			                        $x=mysql_fetch_array($type);
+			                        $data_desain = mysql_fetch_array($desain);
+
+			                        $pesanan="Kado";
+			                        $jenis=$x['nama_kado'];
+			                        $harga=$x['harga'];
+			                        $desain = $data_desain['nama'];
+			                        $harga_desain = $data_desain['harga'];
+
+			                        $link="http://localhost/skripsi_abas/index.php?menu=pesan_skin_hp&id=";
 			                    } else { $pesanan="Pesanan Kosong"; $jenis="jenis kosong"; $harga="0";}
 							?>
 							<tr style="color: black">
 								<td width="20px"><?php echo $i ?></td>
-								<td><?php echo $o=$pesanan." - ".$jenis; ?></td>
+								<td><?php echo $o=$pesanan." - ".$jenis.' + '.$desain; ?></td>
 								<td><?php echo $r['tanggal_pemesanan'] ?></td>
 								<td width="200px">
 									<small>
@@ -157,7 +173,7 @@ if (isset($_SESSION['id_user'])) {
 		                           ";
 		                           ?>
 								</td>
-								<td align="right">Rp <?php echo number_format($harga,"2",",","."); $total_harga=$total_harga+$harga; ?></td>
+								<td align="right">Rp <?php echo number_format($harga,"2",",",".").' + '.number_format($harga_desain,"2",",",".") ; $total_harga=$total_harga+($harga+$harga_desain); ?></td>
 							</tr>
 							<?php
 							$i++;
