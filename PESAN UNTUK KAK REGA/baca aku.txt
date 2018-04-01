@@ -1,0 +1,23 @@
+1. harus bisa menambah produk baru melalui admin (contoh : pigura, binder, box bunga, yg didalam nya ada foto kita)
+2. menambah kategori baru melalui admin (foto wpap, pencil, cartoon)
+3. menambah stok melalui admin dan bisa di isi oleh member ketika mengisi stok pembelian (kalau bisa, kalau gabisa gapapa hehe)
+4. semua data diatas dapat dilihat hasilnya di lokasi member dan pengunjung saat membuka menu produk
+5. adanya fitur verifikasi email melalui email member baru (supaya mempersedikit member palsu)
+6. kalau bisa sudah selesai sampai hari senin jam 12.00 siang (maaf ya kak, deadline dan aku kebingungan hehe)
+7. nanti kakak bilang aja harganya ya , pasti saya bayar 100% :)
+8. daftar harga produk, diganti menjadi daftar harga ongkir setiap kabupaten atau kota
+9. pada bagian menu product didalam admin dashboard, produk tidak bisa di delete (eror)
+10. pastikan semua bisa CRUD
+
+(KALAU BISA, kalau gabisa gapapa hehe)
+saat member akan membeli kado, tidak harus pada menu member (pesan disini) baru bisa ngisi dan beli
+tapi kalo bisa di bagian menu produk, ketika produknya dipilih salah satu bisa langsung masuk
+kebagian pengisian jenis kado,kategori dsb yg sama seperti halaman menu di dalam member "pesan disini".
+
+
+(PERMASALAHAN INTI)
+1.tidak boleh menambah produk atau kategori melalui phpmyadmin atau apalagi melalui halaman php baru (manual, ngoding baru lagi)
+admin harus bisa CRUD didalam dashboard karna web dinamis bukan statis
+2. mengatasi adanya pelanggan palsu yg sign up menjadi member
+
+makasih ka, maaf mengganggu ya :)
