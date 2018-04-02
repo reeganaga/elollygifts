@@ -147,7 +147,7 @@ if ($r['gambar_2']=='') {
                     <div style="width: 100%; height: 230px">
                       <div style="float: left; width: 45%; height: 300px;margin-right: 20px;">
                         Gambar Referensi
-                        <br><IMG SRC="<?php echo $div.$gambar1 ?>" height='200px' width='auto'><br><br>
+                        <br><IMG SRC="<?php echo 'admin-web/konfirmasi_bayar/' . $div.$gambar1 ?>" height='200px' width='auto'><br><br>
                         <a href="<?php echo $divdownload.$gambar1 ?>" target="_blank" class="btn btn-primary"> Download Gambar </a>
                       </div>
                       <div style="float: left; width: 45%">

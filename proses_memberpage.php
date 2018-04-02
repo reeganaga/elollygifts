@@ -262,7 +262,11 @@ if (isset($_POST['prose_bayar'])){
     $tmp_file = $_FILES['gambar']['tmp_name'];
      
     // Set path folder tempat menyimpan gambarnya
-    $path = "admin-web/konfirmasi_bayar/".$nama_file;
+    $folder = "admin-web/konfirmasi_bayar/";
+    if (!file_exists($folder)) {
+        mkdir($folder);
+    }
+    $path = $folder.$nama_file;
      
     if($tipe_file == "image/jpeg" || $tipe_file == "image/png"){ // Cek apakah tipe file yang diupload adalah JPG / JPEG / PNG
         // Jika tipe file yang diupload JPG / JPEG / PNG, lakukan :
