@@ -32,7 +32,7 @@ if ($ketemu > 0){
 ?>
   <script language="JavaScript">
   alert('Selamat, Login Sukses!');
-  document.location='index.php?menu=memberpage'</script> 
+  document.location='index.php?menu=produk_galeri'</script> 
 <?php
 }
   else{

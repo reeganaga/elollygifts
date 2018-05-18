@@ -133,7 +133,7 @@
 							</a>
 							<div class="hover-effect-1">
 								<div class="hover-inner">
-									<a href="?menu=pesan_skin_laptop&id=0" class="wl-color1">
+									<a href="?menu=pesan_kado&id=0" class="wl-color1">
 										<p>
 											"<br>
 											Pesan Disini<br><br>"

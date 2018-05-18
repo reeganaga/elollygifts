@@ -59,12 +59,14 @@ if (isset($_POST['edit_gambar'])) {
     $tanggal_upload=date('Y-m-d');
     $kategori=$_POST['kategori'];
     $id_gambar=$_POST['id'];
+    $id_kado=$_POST['id_kado'];
     
     $sql="UPDATE product set 
         judul_product='".$judul."',
         deskripsi='".$diskripsi_gambar."',
         tanggal_upload='".$tanggal_upload."', 
-        id_category='".$kategori."'  
+        id_category='".$kategori."', 
+        id_kado='".$id_kado."' 
         where id_product = $id_gambar";
     $edit_gambar = mysql_query($sql);
 

@@ -43,6 +43,9 @@ switch ($sw_menu) {
 		case 'pesan_skin_laptop':
 			require_once'memberpage_pesan_skin_laptop.php';
 		break;
+		case 'pesan_kado':
+			require_once'memberpage_pesan_kado.php';
+		break;
 		case 'pesan_skin_hp':
 			require_once'memberpage_pesan_skin_hp.php';
 		break;

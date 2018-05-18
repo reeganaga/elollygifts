@@ -11,6 +11,9 @@ $lihat=mysql_query("SELECT * FROM product where id_product=$id");
 $category=mysql_query("SELECT * FROM category");
 $r=mysql_fetch_array($lihat);
 
+//ambil data kado
+$query_kado=mysql_query("SELECT * FROM kado");
+
 ?>
 <div class="content container">
         <h2 class="page-title">Upload -  <span class="fw-semi-bold">Gambar</span></h2>
@@ -47,20 +50,32 @@ $r=mysql_fetch_array($lihat);
                             <input type="text" name="diskripsi_gambar" class="form-control" value="<?php echo $r['deskripsi'];?>" required title="jangan males isi diskripsi" >
                             </div>
                             
-                                <label>Pilih Kategori: </label>
-                                <div class="form-group">
-                                    <select class="form-control" id="sel1" name="kategori" required>
-                                        <option <?php if ($r['id_category']=='') {echo "selected";} ?> value="" style="font-style: italic;">
-                                            Pilih kategori......
+                            <label>Pilih Kategori: </label>
+                            <div class="form-group">
+                                <select class="form-control" id="sel1" name="kategori" required>
+                                    <option <?php if ($r['id_category']=='') {echo "selected";} ?> value="" style="font-style: italic;">
+                                        Pilih kategori......
+                                    </option>
+                                    <?php while ($n=mysql_fetch_array($category)){ ?>
+                                        <option <?php if ($r['id_category']==$n['id_category']) {echo "selected";} ?> value="<?php echo $n['id_category']; ?>"> 
+                                            <?php echo $n['nama_category']." - ".$n['size'] ;?> 
                                         </option>
-                                        <?php while ($n=mysql_fetch_array($category)){ ?>
-                                            <option <?php if ($r['id_category']==$n['id_category']) {echo "selected";} ?> value="<?php echo $n['id_category']; ?>"> 
-                                                <?php echo $n['nama_category']." - ".$n['size'] ;?> 
-                                            </option>
-                                        <?php } ?>
-                                    </select>
-                                </div>
-
+                                    <?php } ?>
+                                </select>
+                            </div>
+                            <label for="">Pilih Kado</label>
+                            <div class="form-group">
+                                <select class="form-control" id="sel1" name="id_kado" required>
+                                    <option <?php if ($r['id_kado']=='') {echo "selected";} ?> value="" style="font-style: italic;">
+                                        Pilih Kado......
+                                    </option>
+                                    <?php while ($k=mysql_fetch_array($query_kado)){ ?>
+                                        <option <?php if ($r['id_kado']==$k['id_kado']) {echo "selected";} ?> value="<?php echo $k['id_kado']; ?>"> 
+                                            <?php echo $k['nama_kado']." - ".$k['ukuran'] ;?> 
+                                        </option>
+                                    <?php } ?>
+                                </select>
+                            </div>
                         <input type="hidden" name="fotolama" value="<?php echo $r['gambar_product']; ?>" >
                         <input type="hidden" name="id" value="<?php echo $id; ?>">
                         <div style="width: 100%" align="right">

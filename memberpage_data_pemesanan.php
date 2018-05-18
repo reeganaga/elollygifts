@@ -102,6 +102,8 @@ if (isset($_SESSION['id_user'])) {
 				</div>
 			</div>
 			<div class="row cus_row" style="margin:10px; margin-top: 0px">
+				<?php //echo dirname(__FILE__) ; ?>
+
 				<!-- Keranjang pesanan start -->
 				<div class="on" style="width: 100%" id="keranjang_isi">
 					<h3>Keranjang Pesanan</h3>

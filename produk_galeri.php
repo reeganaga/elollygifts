@@ -53,7 +53,7 @@ $foto=mysql_query("select * from testimoni inner join pelanggan on testimoni.id_
 								</a>
 								<div class="hover-effect-1">
 									<div class="hover-inner">
-										<a href="" class="wl-color1" data-icon=&#x30;></a>
+										<a href="index.php?menu=pesan_kado&id_product=<?php echo $r['id_product']; ?>&id=0&id_kado=<?php echo $r['id_kado']; ?>" class="wl-color1" data-icon=&#x30;></a>
 									</div>
 								</div>
 							</div>
