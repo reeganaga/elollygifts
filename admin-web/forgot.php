@@ -26,40 +26,29 @@
             <section class="widget login-widget">
                 <header class="text-align-center">
                     <img src="img/w-logo.png" alt="logo">
-                    <h4>Login to your account</h4>
+                    <h4>Fill your email</h4>
                 </header>
                 <div class="body">
                     <form class="no-margin"
-                          name="login" method="post" action="proseslogin.php">
+                          name="login" method="post" action="prosesforgot.php">
                         <fieldset>
                             <div class="form-group">
-                                <label for="email" >Username</label>
+                                <label for="email" >Email</label>
                                 <div class="input-group">
                                     <span class="input-group-addon">
                                         <i class="fa fa-user"></i>
                                     </span>
-                                    <input id="email" type="text" name="username"  class="form-control input-lg input-transparent"
-                                           placeholder="Username">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="password" >Password</label>
-
-                                <div class="input-group input-group-lg">
-                                    <span class="input-group-addon">
-                                        <i class="fa fa-lock"></i>
-                                    </span>
-                                    <input id="password" type="password" name="password" class="form-control input-lg input-transparent"
-                                           placeholder="Your Password">
+                                    <input id="email" type="text" name="email"  class="form-control input-lg input-transparent"
+                                           placeholder="Email">
                                 </div>
                             </div>
                         </fieldset>
                         <div class="form-actions">
                             <button type="submit" class="btn btn-block btn-lg btn-danger">
                                 <span class="small-circle"><i class="fa fa-caret-right"></i></span>
-                                <small>Sign In</small>
+                                <small>Send Forgot Password Verification</small>
                             </button>
-                            <a class="forgot" href="forgot.php">Forgot password</a>
+                            <a class="forgot" href="forgot.php"></a>
                         </div>
                     </form>
                 </div>
