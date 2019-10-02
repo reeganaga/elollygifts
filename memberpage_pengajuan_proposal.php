@@ -9,29 +9,29 @@ if (isset($_SESSION['id_user'])) {
 <style type="text/css">
 	.cus_row{
 		padding: 30px;
-	    border-radius: 20px;
-	    background-color: #eeeeee;
+	  border-radius: 20px;
+	  background-color: #eeeeee;
 	}
 	.cus_tab {
 		height: 100%;
-	    width: 120px;
-	    background-color: black;
-	    margin-right: 10px;
-	    float: left;
-	    display: table;
-	    border-radius: 5px;
-	    margin-top: -5px;
+		width: 120px;
+		background-color: black;
+		margin-right: 10px;
+		float: left;
+		display: table;
+		border-radius: 5px;
+		margin-top: -5px;
 	}
 	.cus_active {
 		height: 100%;
-	    width: 120px;
-	    background-color: #eeeeee !important;
-	    margin-right: 10px;
-	    float: left;
-	    display: table;
-	    border-radius: 5px !important;
-	    margin-bottom: -5px !important;
-	    margin-top: 5px;
+		width: 120px;
+		background-color: #eeeeee !important;
+		margin-right: 10px;
+		float: left;
+		display: table;
+		border-radius: 5px !important;
+		margin-bottom: -5px !important;
+		margin-top: 5px;
 	}
 	.cus_a {
 		vertical-align: -webkit-baseline-middle;
